@@ -49,10 +49,18 @@ if ($stmt = $con->prepare('SELECT id, password,role,username FROM user_list WHER
 		}
 		
 	} else {
-	    echo '<script type="text/javascript">alert("Incorrect password!");history.go(-1);</script>';
+
+			echo '<script type="text/javascript">alert("Incorrect password!");history.go(-1);</script>';
+		
 	}
 } else {
-    echo '<script type="text/javascript">alert("Incorrect username!");history.go(-1);</script>';
+	if($_POST['loginas']=='Student'){
+	    	echo '<script type="text/javascript">alert("Result is not published yet or You are not selected!!");history.go(-1);</script>';
+		}
+		else{
+			echo '<script type="text/javascript">alert("Incorrect password!");history.go(-1);</script>';
+		}
+    //echo '<script type="text/javascript">alert("Incorrect username!");history.go(-1);</script>';
 }
 
 	$stmt->close();

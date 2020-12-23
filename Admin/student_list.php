@@ -201,50 +201,24 @@
                      <form method="post" id="insert_form">  
                           <label>First Name</label>  
                           <input type="text" name="fname" id="fname" class="form-control" />  
+
                           <label>Last Name</label>  
                           <input type="text" name="lname" id="lname" class="form-control" />  
-                          <br />  
+                          
                           <label>Father Name</label>  
-                          <textarea name="father_name" id="father_name" class="form-control"></textarea>  
-                          <br />  
+                          <input name="father_name" id="father_name" class="form-control"></textarea>  
+                          
                           <label>Mother Name</label>  
-                          <textarea name="mather_name" id="mather_name" class="form-control"></textarea>  
-                          <br />  
-                          <label>Select Gender</label>  
-                          <select name="gender" id="gender" class="form-control">  
-                               <option value="Male">Male</option>  
-                               <option value="Female">Female</option>  
-                          </select>  
-                          <br />  
+                          <input name="mather_name" id="mather_name" class="form-control"></textarea>  
+
                           <label>Date of Birth</label>  
                           <input type="Date" name="dob" id="dob" class="form-control" />  
-                          <br />  
-                          
-                          <label class="w3-text-orange w3-large" for="religion">Religion<span class="w3-badge w3-blue">*</span></label>
-                          <select name="religion" id="religion" class="form-control mb-6 is-valid" required="">
-                              <option value="">Select</option>
-                              <option value="Islam">Islam</option>
-                              <option value="Hinduis">Hinduis</option>
-                              <option value="Christianity">Christianity</option>
-                              <option value="Buddhism">Buddhism</option>
-                              <option value="Other's">Other's</option>
-                            </select>
-                          <br />  
 
-                          <label class="w3-text-orange w3-large" for="blood_group">Blood Group<span class="w3-badge w3-blue">*</span></label>
-                          <select name="blood_group" id="blood_group" class="form-control mb-6 is-valid" required="">
-                                          <option value="">Select</option>
-                                          <option value="A+">A+</option>
-                                          <option value="A-">A-</option>
-                                          <option value="B+">B+</option>
-                                          <option value="B-">B-</option>
-                                          <option value="O+">O+</option>
-                                          <option value="O-">O-</option>
-                                          <option value="AB+">AB+</option>
-                                          <option value="AB+">AB-</option>
-                                          <option value="AB+">N/A</option>
-                            </select>
-                            <br>
+                          <label>Phone Number</label>  
+                          <input type="text" name="phone" id="phone" class="form-control" />  
+                          
+                          <label>Email</label>  
+                          <input type="text" name="email" id="email" class="form-control" />  
 
                           <input type="hidden" name="student_id" id="student_id" />  
                           <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-success" />  
@@ -274,12 +248,17 @@
             },
             dataType: "json",
             success: function(data) {
-                $('#name').val(data.student_name);
-                $('#address').val(data.address);
+                $('#fname').val(data.fname);
+                $('#lname').val(data.lname);
+                $('#father_name').val(data.father_name);
+                $('#mather_name').val(data.mather_name);
+                $('#dob').val(data.dob);
                 $('#gender').val(data.gender);
-                $('#designation').val(data.designation);
-                $('#salary').val(data.salary);
-                $('#employee_id').val(data.id);
+                $('#religion').val(data.religion);
+                $('#blood_group').val(data.blood_group);
+                $('#student_id').val(data.student_id);
+                $('#phone').val(data.phone);
+                $('#email').val(data.email);
                 $('#insert').val("Update");
                 $('#add_data_Modal').modal('show');
             }
@@ -287,17 +266,28 @@
     });
     $('#insert_form').on("submit", function(event) {
         event.preventDefault();
-        if ($('#name').val() == "") {
-            alert("Employee Name Required");
-        } else if ($('#address').val() == '') {
-            alert("Employee Address Required");
-        } else if ($('#designation').val() == '') {
-            alert("Employee Designation Required");
-        } else if ($('#salary').val() == '') {
-            alert("Employee Salary Required");
-        } else {
+        if ($('#fname').val() == "") {
+            alert("First Name Required");
+        } else if ($('#lname').val() == '') {
+            alert("Last Name Required");
+        }
+        else if ($('#father_name').val() == '') {
+            alert("Father Name Required");
+        }
+        else if ($('#mather_name').val() == '') {
+            alert("Mather Name Required");
+        }
+        else if ($('#dob').val() == '') {
+            alert("Date of Birth Required");
+        }
+        else if ($('#phone').val() == '') {
+            alert("Phone Number Required");
+        }
+         else if ($('#email').val() == '') {
+            alert("Email Required");
+        }  else {
             $.ajax({
-                url: "insert.php",
+                url: "update.php",
                 method: "POST",
                 data: $('#insert_form').serialize(),
                 beforeSend: function() {
@@ -311,6 +301,7 @@
             });
         }
     });
+
     $(document).on('click', '.view_data', function() {
         var id = $(this).attr("id");
         if (id != '') {

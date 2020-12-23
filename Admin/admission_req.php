@@ -205,7 +205,7 @@
                           <label>Date of Birth</label>  
                           <input type="Date" name="dob" id="dob" class="form-control" />  
                           <br />  
-                          
+
                           <label class="w3-text-orange w3-large" for="religion">Religion<span class="w3-badge w3-blue">*</span></label>
                           <select name="religion" id="religion" class="form-control mb-6 is-valid" required="">
                               <option value="">Select</option>
@@ -231,6 +231,29 @@
                                           <option value="AB+">N/A</option>
                             </select>
                             <br>
+
+                          <label class="w3-text-orange w3-large" for="religion">Religion<span class="w3-badge w3-blue">*</span></label>
+                          <select name="religion" id="religion" class="form-control mb-6 is-valid" required="">
+                              <option value="">Select</option>
+                              <option value="Islam">Islam</option>
+                              <option value="Hinduis">Hinduis</option>
+                              <option value="Christianity">Christianity</option>
+                              <option value="Buddhism">Buddhism</option>
+                              <option value="Other's">Other's</option>
+                            </select>
+
+
+                          <label class="w3-text-orange w3-large" for="class">Class<span class="w3-badge w3-blue">*</span></label>
+                            <select name="class" id="class" class="form-control mb-6 is-valid" required="">
+                              <option value="">Select</option>
+                              <option value="Play">Play</option>
+                              <option value="Nursery">Nursery</option>
+                              <option value="One">One</option>
+                              <option value="Two">Two</option>
+                              <option value="Three">Three</option>
+                              <option value="Four">Four</option>
+                              <option value="Five">Five</option>
+                            </select>
 
                           <input type="hidden" name="employee_id" id="employee_id" />  
                           <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-success" />  

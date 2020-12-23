@@ -19,7 +19,7 @@
 	$username=$_POST['username'];
 	$password=$_POST['password'];
 	$paymentnumber=$_POST['paymentnumber'];
-	//$photo = $_POST['photo'];
+	$photo = $_POST['photo'];
 
 	$sql_u = "SELECT * FROM user_list WHERE username='$username'";
 	$res_u = mysqli_query($con, $sql_u);
@@ -27,22 +27,23 @@
 		echo '<script type="text/javascript">alert("Sorry... username already taken");history.go(-1);</script>';
   	}
   	else{
-
         // Get image name
-        $destination = "images/".$_FILES['photo']['name'];
+        $destination = "../admission/images/".$_FILES['photo']['name'];
         $filename = $_FILES['photo']['tmp_name'];
         move_uploaded_file($filename, $destination);
+
+
+$query="insert into student_info(fname, lname, father_name, mather_name, email, phone, gender, dob, blood_group, religion, class, shift,paymentnumber, photo) values('$fname', '$lname', '$father_name', '$mather_name', '$email', '$phone', '$gender', '$dob', '$blood_group', '$religion', '$class', '$shift', '$paymentnumber', '$destination')";
+
 $role = "Student";
+$query1="insert into user_list(username, password, role ) values('$username', '$password','$role')";
 
-$query="insert into admission_form(fname, lname, father_name, mather_name, email, phone, gender, dob, blood_group, religion, class, shift,paymentnumber, photo, username, password, role) values('$fname', '$lname', '$father_name', '$mather_name', '$email', '$phone', '$gender', '$dob', '$blood_group', '$religion', '$class', '$shift', '$paymentnumber', '$destination', '$username', '$password', '$role')";
-
-
-if(mysqli_query($con, $query) )
+if(mysqli_query($con, $query) && mysqli_query($con, $query1))
 	{
-			echo '<script type="text/javascript">alert("Admission Form Data Inserted Successfully!!");history.go(-2);</script>';
+			echo '<script type="text/javascript">alert("Admission Form Data Inserted Successfully!!");history.go(-1);</script>';
 	}
 	 else{
-    echo "ERROR: Could not able to execute . " . mysqli_error($con);
+    echo "ERROR: Could not able to execute $res. " . mysqli_error($con);
 	}
 
         	}

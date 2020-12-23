@@ -44,9 +44,13 @@ if($id > 0){
      FROM admission_form
     WHERE 	admission_id='$id'";
 	
-	if(mysqli_query($con, $query))
+    
+    $query1="insert into user_list(username, password, role ) SELECT username, password, role FROM admission_form
+    WHERE   admission_id='$id'";;
+
+	if(mysqli_query($con, $query) && mysqli_query($con, $query1))
 	{
-	    $sql = "delete  from admission_form where admission_id='$id'"; 
+	    $sql = "delete from admission_form where admission_id='$id'"; 
         if(mysqli_query($con, $sql)){
             echo "Account has been accepted.";
         } else{
