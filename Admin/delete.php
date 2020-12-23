@@ -14,7 +14,9 @@ if($id > 0){
   if($totalrows > 0){
     // Delete record
     $query = "DELETE FROM admission_form WHERE admission_id=".$id;
+    $query1 = "DELETE FROM user_list WHERE id=".$id;
     mysqli_query($con,$query);
+    mysqli_query($con,$query1);
     echo 1;
     exit;
   }else{

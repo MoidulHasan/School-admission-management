@@ -1,7 +1,13 @@
 <?php
   include 'security.php';
+  include("../conn.php");
   include("includes/header.php");
   include("includes/navber.php");
+
+  $result = mysqli_query($con, "SELECT * FROM admission_form");
+  $rows = mysqli_num_rows($result);
+  $result1 = mysqli_query($con, "SELECT * FROM student_info");
+  $rows1 = mysqli_num_rows($result1);
 ?>
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -30,7 +36,7 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Applicats</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo " $rows "; ?></div>
                     </div>
                   </div>
                 </div>
@@ -43,7 +49,7 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Students</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo " $rows1 "; ?></div>
                     </div>
                   </div>
                 </div>
