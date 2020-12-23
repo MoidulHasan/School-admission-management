@@ -176,7 +176,7 @@
                       <div class="row">
                       <div class="col-lg-6 w3-leftbar w3-border-green">
                               <div class="form-group has-success">
-                                <label class="w3-text-orange w3-large" for="paymentnumber">Create Username<span class="w3-badge w3-blue">*</span></label>
+                                <label class="w3-text-orange w3-large" for="username">Create Username<span class="w3-badge w3-blue">*</span></label>
                                 <input type="text" name="username" id="username" class="form-control is-valid" placeholder="Create Username" required="">
                               </div>
                           </div>

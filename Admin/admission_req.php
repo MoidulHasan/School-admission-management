@@ -232,16 +232,6 @@
                             </select>
                             <br>
 
-                          <label class="w3-text-orange w3-large" for="religion">Religion<span class="w3-badge w3-blue">*</span></label>
-                          <select name="religion" id="religion" class="form-control mb-6 is-valid" required="">
-                              <option value="">Select</option>
-                              <option value="Islam">Islam</option>
-                              <option value="Hinduis">Hinduis</option>
-                              <option value="Christianity">Christianity</option>
-                              <option value="Buddhism">Buddhism</option>
-                              <option value="Other's">Other's</option>
-                            </select>
-
 
                           <label class="w3-text-orange w3-large" for="class">Class<span class="w3-badge w3-blue">*</span></label>
                             <select name="class" id="class" class="form-control mb-6 is-valid" required="">
