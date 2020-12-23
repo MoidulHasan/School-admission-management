@@ -172,7 +172,33 @@
                       </div>
 
 
+
                       <div class="row">
+                      <div class="col-lg-6 w3-leftbar w3-border-green">
+                              <div class="form-group has-success">
+                                <label class="w3-text-orange w3-large" for="paymentnumber">Create Username<span class="w3-badge w3-blue">*</span></label>
+                                <input type="text" name="username" id="username" class="form-control is-valid" placeholder="Create Username" required="">
+                              </div>
+                          </div>
+
+                        
+                          <div class="col-lg-6 w3-leftbar w3-border-green">
+                              <div class="form-group has-success">       
+                                <label class="w3-text-orange w3-large" for="password">Create Password<span class="w3-badge w3-blue">*</span></label>
+                                <input type="text" name="password" id="password" class="form-control is-valid" placeholder="Create Password" required="">
+                              </div>
+                          </div>
+                      </div>
+
+
+                      <div class="row">
+                      <div class="col-lg-6 w3-leftbar w3-border-green">
+                              <div class="form-group has-success">
+                                <label class="w3-text-orange w3-large" for="paymentnumber">Payment Number<span class="w3-badge w3-blue">*</span></label>
+                                <input type="text" name="paymentnumber" id="paymentnumber" class="form-control is-valid" placeholder="Payment Number" required="">
+                              </div>
+                          </div>
+
                         <div class="col-lg-6 w3-leftbar w3-border-green">
                         <div class="form-group has-success">       
                           <label class="w3-text-orange w3-large" for="photo">Upload Student Photo (150px X 150px)*</label>

@@ -16,6 +16,9 @@
 	$religion=$_POST['religion'];
 	$class=$_POST['class'];
 	$shift=$_POST['shift'];
+	$username=$_POST['username'];
+	$password=$_POST['password'];
+	$paymentnumber=$_POST['paymentnumber'];
 	$photo = $_POST['photo'];
 
 
@@ -25,9 +28,12 @@
         move_uploaded_file($filename, $destination);
 
 
-$query="insert into admission_form(fname, lname, father_name, mather_name, email, phone, gender, dob, blood_group, religion, class, shift, photo) values('$fname', '$lname', '$father_name', '$mather_name', '$email', '$phone', '$gender', '$dob', '$blood_group', '$religion', '$class', '$shift', '$destination')";
+$query="insert into admission_form(fname, lname, father_name, mather_name, email, phone, gender, dob, blood_group, religion, class, shift,paymentnumber, photo) values('$fname', '$lname', '$father_name', '$mather_name', '$email', '$phone', '$gender', '$dob', '$blood_group', '$religion', '$class', '$shift', '$paymentnumber', '$destination')";
 
-if(mysqli_query($con, $query))
+$role = "Student";
+$query1="insert into user_list(username, password, role ) values('$username', '$password','$role')";
+
+if(mysqli_query($con, $query) && mysqli_query($con, $query1))
 	{
 			echo '<script type="text/javascript">alert("Admission Form Data Inserted Successfully!!");history.go(-1);</script>';
 	}
