@@ -31,7 +31,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Student List:</h6>
             <a class="collapse-item" href="admission_req.php">New Admission Request</a>
-            <a class="collapse-item" href="#">Add Student</a>
+            <a class="collapse-item" href="addstudent.php">Add Student</a>
             <a class="collapse-item" href="student_list.php">Student list</a>
 
           </div>
