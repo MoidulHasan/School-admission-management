@@ -185,11 +185,16 @@
                 </div>  
                 <div class="modal-body">  
                      <form method="post" id="insert_form">  
-                          <label>Enter Employee Name</label>  
-                          <input type="text" name="name" id="name" class="form-control" />  
+                          <label>First Name</label>  
+                          <input type="text" name="fname" id="fname" class="form-control" />  
+                          <label>Last Name</label>  
+                          <input type="text" name="lname" id="lname" class="form-control" />  
                           <br />  
-                          <label>Enter Employee Address</label>  
-                          <textarea name="address" id="address" class="form-control"></textarea>  
+                          <label>Father Name</label>  
+                          <textarea name="father_name" id="father_name" class="form-control"></textarea>  
+                          <br />  
+                          <label>Mother Name</label>  
+                          <textarea name="mather_name" id="mather_name" class="form-control"></textarea>  
                           <br />  
                           <label>Select Gender</label>  
                           <select name="gender" id="gender" class="form-control">  
@@ -197,12 +202,36 @@
                                <option value="Female">Female</option>  
                           </select>  
                           <br />  
-                          <label>Enter Designation</label>  
-                          <input type="text" name="designation" id="designation" class="form-control" />  
+                          <label>Date of Birth</label>  
+                          <input type="Date" name="dob" id="dob" class="form-control" />  
                           <br />  
-                          <label>Enter Salary</label>  
-                          <input type="text" name="salary" id="salary" class="form-control" />  
+                          
+                          <label class="w3-text-orange w3-large" for="religion">Religion<span class="w3-badge w3-blue">*</span></label>
+                          <select name="religion" id="religion" class="form-control mb-6 is-valid" required="">
+                              <option value="">Select</option>
+                              <option value="Islam">Islam</option>
+                              <option value="Hinduis">Hinduis</option>
+                              <option value="Christianity">Christianity</option>
+                              <option value="Buddhism">Buddhism</option>
+                              <option value="Other's">Other's</option>
+                            </select>
                           <br />  
+
+                          <label class="w3-text-orange w3-large" for="blood_group">Blood Group<span class="w3-badge w3-blue">*</span></label>
+                          <select name="blood_group" id="blood_group" class="form-control mb-6 is-valid" required="">
+                                          <option value="">Select</option>
+                                          <option value="A+">A+</option>
+                                          <option value="A-">A-</option>
+                                          <option value="B+">B+</option>
+                                          <option value="B-">B-</option>
+                                          <option value="O+">O+</option>
+                                          <option value="O-">O-</option>
+                                          <option value="AB+">AB+</option>
+                                          <option value="AB+">AB-</option>
+                                          <option value="AB+">N/A</option>
+                            </select>
+                            <br>
+
                           <input type="hidden" name="employee_id" id="employee_id" />  
                           <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-success" />  
                      </form>  

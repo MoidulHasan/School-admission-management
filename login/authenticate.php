@@ -44,7 +44,7 @@ if ($stmt = $con->prepare('SELECT id, password,role,username FROM user_list WHER
 			//echo "$role";
 			die();
 		}else if($_POST['loginas']=='Student'){
-			header('location:../student');
+			header('location:../student/index.php');
 			die();
 		}
 		

@@ -32,7 +32,7 @@
             <h6 class="collapse-header">Student List:</h6>
             <a class="collapse-item" href="admission_req.php">New Admission Request</a>
             <a class="collapse-item" href="addstudent.php">Add Student</a>
-            <a class="collapse-item" href="student_list.php">Student list</a>
+            
 
           </div>
         </div>
@@ -42,55 +42,17 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
 
-          <span>Teacher List</span>
+          <span>Students</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Teacher List: </h6>
-            <a class="collapse-item" href="#">All Teacher</a>
-            <a class="collapse-item" href="#">Add teacher</a>
+            <h6 class="collapse-header">Students List: </h6>
+            <a class="collapse-item" href="student_list.php">Student list</a>
           </div>
         </div>
       </li>
       
-      <!-- Nav Item - Members Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities2" aria-expanded="true" aria-controls="collapseUtilities2">
-
-          <span>Singer</span>
-        </a>
-        <div id="collapseUtilities2" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-3 collapse-inner rounded">
-            <h6 class="collapse-header"></h6>
-            <a class="collapse-item" href="#">Singer List</a>
-            <a class="collapse-item" href="#">Singer Booking Request</a>
-            <a class="collapse-item" href="#">Add Pending</a>
-            <a class="collapse-item" href="#">Declined</a>
-            <a class="collapse-item" href="#">Booked</a>
-          </div>
-        </div>
-      </li>
-
-
-
-
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-
-          <span>Job</span>
-        </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-
-            <a class="collapse-item" href="#">Add Pending</a>
-            <a class="collapse-item" href="#">Approved</a>
-            <a class="collapse-item" href="#">Declined</a>
-            <a class="collapse-item" href="#">Applied Job profile</a>
-
-          </div>
-        </div>
-      </li>
+      
 
       <!-- Divider -->
       <hr class="sidebar-divider">
