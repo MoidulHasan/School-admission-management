@@ -287,7 +287,7 @@
             alert("Email Required");
         }  else {
             $.ajax({
-                url: "update.php",
+                url: "insert.php",
                 method: "POST",
                 data: $('#insert_form').serialize(),
                 beforeSend: function() {
