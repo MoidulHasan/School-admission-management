@@ -1,0 +1,1 @@
+This project has been developed to fulfill my university course requirement to ensure knowledge of development skills. School-Admission-Management-System is a web-based software that manages the admission system of a school. Students can apply for admission and authority can review the student's information then they can approve or reject their admission by this system.
